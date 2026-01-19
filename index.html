@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ticket Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Ticket Management System</h1>
+
+<!-- LIVE STATUS SUMMARY -->
+<div id="statusSummary"></div>
+
+<!-- SEARCH -->
+<input id="search" placeholder="Search ticket by title..." onkeyup="searchTicket()">
+
+<!-- FORM -->
+<div class="form-box">
+  <input type="text" id="title" placeholder="Ticket Title *">
+
+  <textarea id="desc" placeholder="Description"></textarea>
+
+  <select id="assign">
+    <option value="">Assign To *</option>
+    <option>Help Desk</option>
+    <option>IT Support</option>
+    <option>Technical Team</option>
+  </select>
+
+  <select id="priority">
+    <option>Low</option>
+    <option>Medium</option>
+    <option>High</option>
+  </select>
+
+  <button id="createTicketBtn" onclick="addTicket()">Create Ticket</button>
+</div>
+
+<!-- TICKETS -->
+<div id="ticketList"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
